@@ -19,7 +19,7 @@ function sendNotification(email) {
         return notification;
     }
     else {
-        const invalidMsg = "Invalid Email";
+        const invalidMsg = "Invalid Email"
         return invalidMsg;
     }
 }
@@ -35,18 +35,16 @@ function checkDigitsInName(name) {
     else {
         return false;
     }
+
 }
 
 function calculateFinalScore(obj) {
     if (typeof obj === 'object' && Array.isArray(obj) !== true) {
         let totalScore = 0;
-
         totalScore = obj.testScore + obj.schoolGrade;
-
         if (obj.isFFamily === true) {
             totalScore += 20;
         }
-
         if (totalScore >= 80) {
             return true;
         }
@@ -57,5 +55,22 @@ function calculateFinalScore(obj) {
     else {
         const invalidMsg = "Invalid Input";
         return invalidMsg;
+    }
+}
+
+function waitingTime(waitingTimes, serialNumber) {
+    if (Array.isArray(waitingTimes) !== true || typeof serialNumber !== 'number') {
+        const invalidMsg = "Invalid Input"
+        return invalidMsg;
+    }
+    else {
+        let sum = 0;
+        for (let i = 0; i < waitingTimes.length; i++) {
+            sum += waitingTimes[i];
+        }
+        const avg = Math.round(sum / waitingTimes.length);
+        const peopleLeft = serialNumber - 1 - waitingTimes.length;
+        const needToWait = avg * peopleLeft;
+        return needToWait;
     }
 }

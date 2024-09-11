@@ -1,6 +1,3 @@
-/*function signature/sample */
-
-
 function calculateTax(income, expenses) {
     if (income <= 0 || expenses <= 0 || expenses > income) {
         const invalidMsg = "Invalid Input";
@@ -13,5 +10,5 @@ function calculateTax(income, expenses) {
     }
 }
 
-const totalTax = calculateTax(5000, 7500);
+const totalTax = calculateTax(6000, -1500);
 console.log(totalTax);

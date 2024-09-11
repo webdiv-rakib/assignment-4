@@ -21,7 +21,9 @@ function calculateFinalScore(obj) {
     }
 }
 
-const sampleInput = { name: "Rajib", testScore: 15, schoolGrade: 25,
-    isFFamily : true }
+const sampleInput = {
+    name: "Rajib", testScore: 15, schoolGrade: 25,
+    isFFamily: true
+}
 
 console.log(calculateFinalScore(sampleInput));

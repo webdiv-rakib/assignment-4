@@ -15,4 +15,4 @@ function waitingTime(waitingTimes, serialNumber) {
         return needToWait;
     }
 }
-console.log(waitingTime([13, 2, 6, 7, 10], 6));
+console.log(waitingTime([7, 8, 3, 4, 5], "9"));

@@ -1,6 +1,6 @@
 
 function checkDigitsInName(name) {
-    if (typeof name !== "string" ) {
+    if (typeof name !== "string") {
         const invalidMsg = "Invalid Input";
         return invalidMsg;
     }
@@ -12,5 +12,5 @@ function checkDigitsInName(name) {
     }
 
 }
-const userName = checkDigitsInName("rakib");
+const userName = checkDigitsInName(["Raj"]);
 console.log(userName);
